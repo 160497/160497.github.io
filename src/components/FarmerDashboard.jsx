@@ -65,7 +65,7 @@ export default function FarmerDashboard({ farmerId }) {
               </div>
               <div style={{ textAlign: 'right' }}>
                 <div style={{ fontSize: 13 }}>{o.status || 'pending'}</div>
-                <div style={{ fontSize: 11, color: '#888' }}>{new Date(o.created_at).toLocaleString()}</div>
+                <div style={{ fontSize: 11, color: '#7c8fa8' }}>{new Date(o.created_at).toLocaleString()}</div>
               </div>
             </div>
           </li>

@@ -1,49 +1,50 @@
 import { useState, useEffect } from "react";
 import portrait from "../assets/image.png";
+import { GITHUB_URL, LINKEDIN_URL } from "../lib/profile";
 // import portrail_1 from "../assets/image_1.png";
 
 /* ─── theme tokens ─────────────────────────────────────────── */
 const THEMES = {
   dark: {
-    bg: "#111111",
-    bgCard: "#191919",
-    bgNav: "#151515",
-    accent: "#FF6B1A",
-    accentMid: "#FF8C42",
-    accentDim: "rgba(255,107,26,0.12)",
-    text: "#F2F2F2",
-    textMuted: "#888",
-    textSub: "#AAAAAA",
+    bg: "#0b1220",
+    bgCard: "#121c2e",
+    bgNav: "#0e1729",
+    accent: "#14B8A6",
+    accentMid: "#2DD4BF",
+    accentDim: "rgba(20,184,166,0.12)",
+    text: "#E8F1F6",
+    textMuted: "#7c8fa8",
+    textSub: "#9DB2C7",
     border: "rgba(255,255,255,0.08)",
-    borderAccent: "rgba(255,107,26,0.35)",
-    navIcon: "#999",
-    pillBg: "rgba(255,107,26,0.12)",
-    pillBorder: "rgba(255,107,26,0.3)",
-    frameBorder: "rgba(255,107,26,0.25)",
-    frameGlow: "0 0 40px rgba(255,107,26,0.15), 0 0 80px rgba(255,107,26,0.06)",
-    cornerColor: "#FF6B1A",
-    toggleBg: "#222",
+    borderAccent: "rgba(20,184,166,0.35)",
+    navIcon: "#8a9cb3",
+    pillBg: "rgba(20,184,166,0.12)",
+    pillBorder: "rgba(20,184,166,0.3)",
+    frameBorder: "rgba(20,184,166,0.25)",
+    frameGlow: "0 0 40px rgba(20,184,166,0.15), 0 0 80px rgba(20,184,166,0.06)",
+    cornerColor: "#14B8A6",
+    toggleBg: "#1a2742",
     shadow: "0 24px 48px rgba(0,0,0,0.5)",
   },
   light: {
-    bg: "#F5F2EE",
+    bg: "#EEF4F7",
     bgCard: "#FFFFFF",
     bgNav: "#FFFFFF",
-    accent: "#E85D04",
-    accentMid: "#FF6B1A",
-    accentDim: "rgba(232,93,4,0.10)",
-    text: "#1A1A1A",
-    textMuted: "#777",
-    textSub: "#555",
+    accent: "#0D9488",
+    accentMid: "#14B8A6",
+    accentDim: "rgba(13,148,136,0.10)",
+    text: "#0F2233",
+    textMuted: "#64778a",
+    textSub: "#4a5d70",
     border: "rgba(0,0,0,0.08)",
-    borderAccent: "rgba(232,93,4,0.3)",
-    navIcon: "#777",
-    pillBg: "rgba(232,93,4,0.08)",
-    pillBorder: "rgba(232,93,4,0.25)",
-    frameBorder: "rgba(232,93,4,0.2)",
-    frameGlow: "0 0 40px rgba(232,93,4,0.10), 0 24px 48px rgba(0,0,0,0.08)",
-    cornerColor: "#E85D04",
-    toggleBg: "#E8E4DF",
+    borderAccent: "rgba(13,148,136,0.3)",
+    navIcon: "#64778a",
+    pillBg: "rgba(13,148,136,0.08)",
+    pillBorder: "rgba(13,148,136,0.25)",
+    frameBorder: "rgba(13,148,136,0.2)",
+    frameGlow: "0 0 40px rgba(13,148,136,0.10), 0 24px 48px rgba(0,0,0,0.08)",
+    cornerColor: "#0D9488",
+    toggleBg: "#DCE6EC",
     shadow: "0 24px 48px rgba(0,0,0,0.12)",
   },
 };
@@ -108,7 +109,7 @@ export default function HeroContent({ theme }) {
       style={{ position: "relative", overflow: "hidden", width: "100%" }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Lora:ital,wght@1,700&display=swap');
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         ::selection { background: ${t.accent}33; }
 
@@ -125,7 +126,7 @@ export default function HeroContent({ theme }) {
         .btn-primary {
           display: inline-flex; align-items: center; gap: 8px;
           background: ${t.accent}; color: #fff;
-          font-family: 'Sora', sans-serif; font-size: 13.5px; font-weight: 700;
+          font-family: 'Outfit', sans-serif; font-size: 13.5px; font-weight: 700;
           padding: 11px 22px; border-radius: 8px; border: none; cursor: pointer;
           text-decoration: none; letter-spacing: 0.01em;
           transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
@@ -135,7 +136,7 @@ export default function HeroContent({ theme }) {
         .btn-outline {
           display: inline-flex; align-items: center; gap: 8px;
           background: transparent; color: ${t.text};
-          font-family: 'Sora', sans-serif; font-size: 13.5px; font-weight: 600;
+          font-family: 'Outfit', sans-serif; font-size: 13.5px; font-weight: 600;
           padding: 10px 20px; border-radius: 8px;
           border: 1.5px solid ${t.border}; cursor: pointer;
           text-decoration: none; letter-spacing: 0.01em;
@@ -285,11 +286,11 @@ export default function HeroContent({ theme }) {
           <div style={fadeIn(0.12)}>
             <p style={{ fontSize: 15, color: t.textMuted, fontWeight: 400, marginBottom: "0.3rem" }}>
               Hello, my name is{" "}
-              <span style={{ color: t.text, fontWeight: 600 }}>Chekole Ngusalem</span>
+              <span style={{ color: t.text, fontWeight: 600 }}>Fanuel Negasi</span>
             </p>
             <h1
               style={{
-                fontFamily: "'Sora', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 fontSize: "clamp(1.3rem, 3vw, 2rem)",
                 fontWeight: 800,
                 lineHeight: 1,
@@ -368,7 +369,7 @@ export default function HeroContent({ theme }) {
             {[
               {
                 label: "GitHub",
-                href: "https://github.com/majilanIS/",
+                href: GITHUB_URL,
                 icon: (
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 .5C5.73.5.75 5.48.75 11.76c0 4.96 3.22 9.17 7.7 10.65.56.1.76-.24.76-.54 0-.27-.01-1-.01-1.95-3.13.68-3.8-1.51-3.8-1.51-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .17 1.55.93 1.55.93.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.71-1.49-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.47.11-3.06 0 0 .95-.3 3.12 1.15a10.8 10.8 0 0 1 2.84-.38c.96 0 1.92.13 2.84.38 2.16-1.45 3.11-1.15 3.11-1.15.61 1.59.23 2.77.12 3.06.72.79 1.16 1.79 1.16 3.02 0 4.32-2.64 5.27-5.15 5.55.4.35.76 1.05.76 2.12 0 1.53-.01 2.77-.01 3.15 0 .3.2.65.77.54 4.48-1.48 7.69-5.69 7.69-10.65C23.25 5.48 18.27.5 12 .5z" />
@@ -377,7 +378,7 @@ export default function HeroContent({ theme }) {
               },
               {
                 label: "LinkedIn",
-                href: "https://linkedin.com/in/chekole-majilan-8b4651336/",
+                href: LINKEDIN_URL,
                 icon: (
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 24h4V7h-4v17zM8.5 7v17h4v-9.3c0-2.3.8-3.9 2.9-3.9 2 0 2.1 1.8 2.1 4v9.2h4V13c0-5.6-3-8.2-7-8.2-3.2 0-4.6 1.8-5.1 3.1V7h-1z" />
@@ -457,13 +458,13 @@ export default function HeroContent({ theme }) {
                 boxShadow: t.frameGlow,
                 background:
                   theme === "dark"
-                    ? "radial-gradient(circle at 30% 20%, rgba(130,130,130,0.28), rgba(49,49,49,0.95) 58%, rgba(26,26,26,1) 100%)"
-                    : "radial-gradient(circle at 30% 20%, rgba(236,231,220,0.96), rgba(220,212,198,0.96) 60%, rgba(193,183,168,1) 100%)",
+                    ? "radial-gradient(circle at 30% 20%, rgba(130,130,130,0.28), rgba(26,40,62,0.95) 58%, rgba(26,26,26,1) 100%)"
+                    : "radial-gradient(circle at 30% 20%, rgba(222,233,239,0.96), rgba(203,218,227,0.96) 60%, rgba(160,180,193,1) 100%)",
                 aspectRatio: "3/4",
                 width: "100%",
               }}
             >
-              <img src={portrait} alt="Chekole Ngusalem" className="hero-frame-img" />
+              <img src={portrait} alt="Fanuel Negasi" className="hero-frame-img" />
 
               {/* Bottom scrim — gives the "Open to work" chip a ground to sit
                   on, and anchors the portrait instead of letting it float. */}
@@ -474,8 +475,8 @@ export default function HeroContent({ theme }) {
                   pointerEvents: "none",
                   background:
                     theme === "dark"
-                      ? "linear-gradient(180deg, transparent 48%, rgba(10,10,10,0.62) 100%)"
-                      : "linear-gradient(180deg, transparent 52%, rgba(60,48,36,0.34) 100%)",
+                      ? "linear-gradient(180deg, transparent 48%, rgba(7,13,25,0.62) 100%)"
+                      : "linear-gradient(180deg, transparent 52%, rgba(28,48,68,0.34) 100%)",
                 }}
               />
 
@@ -523,7 +524,7 @@ export default function HeroContent({ theme }) {
                 bottom: 16,
                 left: "50%",
                 transform: "translateX(-50%)",
-                background: theme === "dark" ? "rgba(17,17,17,0.88)" : "rgba(255,255,255,0.88)",
+                background: theme === "dark" ? "rgba(11,18,32,0.88)" : "rgba(255,255,255,0.88)",
                 backdropFilter: "blur(8px)",
                 WebkitBackdropFilter: "blur(8px)",
                 border: `1px solid ${t.borderAccent}`,

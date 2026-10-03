@@ -5,24 +5,24 @@ import "./AboutPage.css";
 /* small theme tokens (kept local for About page) */
 const THEMES = {
   dark: {
-    bg: "#0b0f19",
-    bgNav: "#05060a",
-    bgCard: "#0f1114",
-    accent: "#60a5fa",
+    bg: "#0b1220",
+    bgNav: "#070d19",
+    bgCard: "#121c2e",
+    accent: "#2dd4bf",
     text: "#e6eef8",
     textSub: "#cbd5e1",
     border: "rgba(255,255,255,0.04)",
-    timeline: "rgba(96,165,250,0.25)",
+    timeline: "rgba(45,212,191,0.25)",
   },
   light: {
-    bg: "#F7F5F2",
-    bgNav: "#F2EFEA",
+    bg: "#F3F7FA",
+    bgNav: "#EAF1F5",
     bgCard: "#FFFFFF",
-    accent: "#1f6feb",
-    text: "#1a1a1a",
+    accent: "#0d9488",
+    text: "#0f2233",
     textSub: "#4b5563",
     border: "rgba(0,0,0,0.06)",
-    timeline: "rgba(31,111,235,0.12)",
+    timeline: "rgba(13,148,136,0.12)",
   },
 };
 

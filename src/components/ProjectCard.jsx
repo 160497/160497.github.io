@@ -26,7 +26,7 @@ export default function ProjectCard({
   description = "",
   problem = "",
   tags = [],
-  accent = "#FF6B1A",
+  accent = "#14B8A6",
   icon = "🛠",
   category = "",
   stats = [],
@@ -45,11 +45,11 @@ export default function ProjectCard({
   const [expanded, setExpanded] = useState(false);
   const dark = theme === "dark";
 
-  const bg       = dark ? (featured ? "#1A1A1A" : "#171717") : (featured ? "#FFFFFF" : "#FAFAFA");
+  const bg       = dark ? (featured ? "#0F2233" : "#101a2c") : (featured ? "#FFFFFF" : "#FAFAFA");
   const border   = hovered ? `${accent}55` : dark ? "rgba(255,255,255,0.07)" : "rgba(0,0,0,0.08)";
-  const textPri  = dark ? "#F0F0F0" : "#1A1A1A";
-  const textMut  = dark ? "#777" : "#888";
-  const textSub  = dark ? "#999" : "#666";
+  const textPri  = dark ? "#F0F0F0" : "#0F2233";
+  const textMut  = dark ? "#64778a" : "#7c8fa8";
+  const textSub  = dark ? "#8a9cb3" : "#666";
   const tagBg    = dark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.05)";
   const tagBdr   = dark ? "rgba(255,255,255,0.09)" : "rgba(0,0,0,0.09)";
   const btnBg    = dark ? "rgba(255,255,255,0.05)" : "rgba(0,0,0,0.05)";
@@ -178,7 +178,7 @@ export default function ProjectCard({
             display: "flex", alignItems: "center", gap: 8, marginBottom: 2, flexWrap: "wrap",
           }}>
             <h3 style={{
-              fontFamily: "'Sora', sans-serif", fontWeight: 800,
+              fontFamily: "'Outfit', sans-serif", fontWeight: 800,
               fontSize: featured ? 17 : 15, color: hovered ? accent : textPri,
               letterSpacing: "-0.02em", transition: "color 0.22s", margin: 0,
             }}>{title}</h3>
@@ -191,7 +191,7 @@ export default function ProjectCard({
 
       {/* Tagline */}
       <p style={{
-        fontFamily: "'Sora', sans-serif",
+        fontFamily: "'Outfit', sans-serif",
         fontSize: 13, fontWeight: 700, color: textPri,
         marginBottom: 6, lineHeight: 1.25,
       }}>{tagline}</p>
@@ -277,7 +277,7 @@ export default function ProjectCard({
             display: "inline-flex", alignItems: "center", gap: 5,
             background: btnBg, border: `1px solid ${btnBdr}`,
             borderRadius: 7, padding: "6px 12px", textDecoration: "none",
-            fontSize: 11.5, fontWeight: 700, color: textSub, fontFamily: "'Sora',sans-serif",
+            fontSize: 11.5, fontWeight: 700, color: textSub, fontFamily: "'Outfit',sans-serif",
             transition: "border-color 0.2s, color 0.2s, background 0.2s",
           }}
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = accent + "66"; e.currentTarget.style.color = accent; }}
@@ -292,7 +292,7 @@ export default function ProjectCard({
             display: "inline-flex", alignItems: "center", gap: 5,
             background: accent, border: `1px solid ${accent}`,
             borderRadius: 7, padding: "6px 12px", textDecoration: "none",
-            fontSize: 11.5, fontWeight: 700, color: "#fff", fontFamily: "'Sora',sans-serif",
+            fontSize: 11.5, fontWeight: 700, color: "#fff", fontFamily: "'Outfit',sans-serif",
             boxShadow: `0 2px 12px ${accent}44`,
             transition: "opacity 0.2s, transform 0.15s",
           }}
@@ -307,7 +307,7 @@ export default function ProjectCard({
             display: "inline-flex", alignItems: "center", gap: 5,
             background: "transparent", border: `1px solid ${dark ? "rgba(255,255,255,0.07)" : "rgba(0,0,0,0.08)"}`,
             borderRadius: 7, padding: "6px 12px",
-            fontSize: 11.5, fontWeight: 600, color: textMut, fontFamily: "'Sora',sans-serif",
+            fontSize: 11.5, fontWeight: 600, color: textMut, fontFamily: "'Outfit',sans-serif",
           }}>
             🚧 Coming Soon
           </span>

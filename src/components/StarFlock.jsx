@@ -16,7 +16,7 @@ import { useEffect, useRef } from "react";
  *   theme   {string}  "dark" | "light"
  *   density {number}  multiplier on the auto-computed star count
  */
-export default function StarFlock({ accent = "#FF6B1A", theme = "dark", density = 1 }) {
+export default function StarFlock({ accent = "#14B8A6", theme = "dark", density = 1 }) {
   const canvasRef = useRef(null);
   const stateRef = useRef({ boids: [], w: 0, h: 0, dpr: 1 });
   const rafRef = useRef(0);

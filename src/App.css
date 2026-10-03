@@ -14,7 +14,7 @@ body {
 	overflow-x: hidden;
 	/* Solid ground under the fixed PageBackdrop — keeps overscroll and the
 	   area behind any transparent section on-theme. */
-	background: var(--bg, #111111);
+	background: var(--bg, #0b1220);
 	transition: background 0.4s;
 }
 

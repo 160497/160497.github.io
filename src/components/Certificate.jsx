@@ -40,24 +40,24 @@ export default function Certificate({ theme = "dark" }) {
 
 	const colors = {
 		dark: {
-			bg: "#111111",
-			card: "#191919",
-			text: "#F2F2F2",
+			bg: "#0b1220",
+			card: "#121c2e",
+			text: "#E8F1F6",
 			muted: "#9A9A9A",
-			accent: "#FF6B1A",
+			accent: "#14B8A6",
 			border: "rgba(255,255,255,0.08)",
-			borderAccent: "rgba(255,107,26,0.35)",
-			pill: "rgba(255,107,26,0.12)",
+			borderAccent: "rgba(20,184,166,0.35)",
+			pill: "rgba(20,184,166,0.12)",
 		},
 		light: {
-			bg: "#F5F2EE",
+			bg: "#EEF4F7",
 			card: "#FFFFFF",
-			text: "#1A1A1A",
+			text: "#0F2233",
 			muted: "#666666",
-			accent: "#E85D04",
+			accent: "#0D9488",
 			border: "rgba(0,0,0,0.08)",
-			borderAccent: "rgba(232,93,4,0.28)",
-			pill: "rgba(232,93,4,0.10)",
+			borderAccent: "rgba(13,148,136,0.28)",
+			pill: "rgba(13,148,136,0.10)",
 		},
 	}[theme] || colors.dark;
 
@@ -173,7 +173,7 @@ export default function Certificate({ theme = "dark" }) {
 										borderRadius: 12,
 										border: `1px solid ${colors.border}`,
 										background:
-											"linear-gradient(135deg, rgba(255,107,26,0.14), rgba(255,255,255,0.02))",
+											"linear-gradient(135deg, rgba(20,184,166,0.14), rgba(255,255,255,0.02))",
 										overflow: "hidden",
 										marginBottom: 14,
 									}}

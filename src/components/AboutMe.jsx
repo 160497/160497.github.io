@@ -8,7 +8,7 @@ export default function AboutMe() {
           fontSize: "clamp(2rem, 4vw, 2.75rem)",
           marginBottom: 16,
           color: "var(--text, #ffffff)",
-          background: "linear-gradient(90deg, var(--accent, #60a5fa), var(--text-sub, #cbd5e1))",
+          background: "linear-gradient(90deg, var(--accent, #2dd4bf), var(--text-sub, #cbd5e1))",
           backgroundClip: "text",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
@@ -18,7 +18,7 @@ export default function AboutMe() {
       </h1>
 
       <p style={{ maxWidth: "800px", lineHeight: "1.75", marginBottom: 16, color: "var(--text-sub, #cbd5e1)", overflowWrap: "break-word" }}>
-        I am <strong>Chekole Ngusalem</strong>, a Backend-leaning Full-Stack Developer
+        I am <strong>Fanuel Negasi</strong>, a Backend-leaning Full-Stack Developer
         and AI enthusiast based in Addis Ababa, Ethiopia.
       </p>
 

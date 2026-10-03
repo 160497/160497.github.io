@@ -7,46 +7,46 @@ import SkillCard from "./SkillCard";
 ───────────────────────────────────────────────────────────── */
 const THEMES = {
   dark: {
-    bg: "#111111",
-    bgCard: "#191919",
-    bgSection: "#141414",
+    bg: "#0b1220",
+    bgCard: "#121c2e",
+    bgSection: "#0d1627",
     /* Translucent so the star flock drifts visibly behind each panel.
-       Deliberately LIGHTER than every stop of the page gradient (#171717 →
-       #0C0C0C), so the panel reads as raised no matter where it sits on the
+       Deliberately LIGHTER than every stop of the page gradient (#101a2c →
+       #070D19), so the panel reads as raised no matter where it sits on the
        scroll. The previous value was darker than the ground at the top and
        lighter at the bottom, so its elevation flipped as you scrolled. */
-    panelBg: "rgba(38,38,38,0.62)",
-    accent: "#FF6B1A",
-    accentDim: "rgba(255,107,26,0.10)",
-    text: "#F2F2F2",
+    panelBg: "rgba(18,30,48,0.62)",
+    accent: "#14B8A6",
+    accentDim: "rgba(20,184,166,0.10)",
+    text: "#E8F1F6",
     textMuted: "#666",
-    textSub: "#999",
+    textSub: "#8a9cb3",
     border: "rgba(255,255,255,0.07)",
-    borderAccent: "rgba(255,107,26,0.30)",
-    pillBg: "rgba(255,107,26,0.12)",
-    pillBorder: "rgba(255,107,26,0.28)",
-    tabActiveBg: "#FF6B1A",
+    borderAccent: "rgba(20,184,166,0.30)",
+    pillBg: "rgba(20,184,166,0.12)",
+    pillBorder: "rgba(20,184,166,0.28)",
+    tabActiveBg: "#14B8A6",
     tabBg: "rgba(255,255,255,0.04)",
     tabBorder: "rgba(255,255,255,0.08)",
   },
   light: {
-    bg: "#F5F2EE",
+    bg: "#EEF4F7",
     bgCard: "#FFFFFF",
-    bgSection: "#EDEAE6",
-    /* Lighter than every stop of the light gradient (#FBF9F6 → #EBE7E0), and
+    bgSection: "#E3EBF0",
+    /* Lighter than every stop of the light gradient (#F8FBFC → #E0E9EE), and
        white like the project cards — so "elevated surface" means the same
        thing everywhere in light mode. */
     panelBg: "rgba(255,255,255,0.70)",
-    accent: "#E85D04",
-    accentDim: "rgba(232,93,4,0.08)",
-    text: "#1A1A1A",
-    textMuted: "#999",
+    accent: "#0D9488",
+    accentDim: "rgba(13,148,136,0.08)",
+    text: "#0F2233",
+    textMuted: "#8a9cb3",
     textSub: "#666",
     border: "rgba(0,0,0,0.07)",
-    borderAccent: "rgba(232,93,4,0.25)",
-    pillBg: "rgba(232,93,4,0.08)",
-    pillBorder: "rgba(232,93,4,0.22)",
-    tabActiveBg: "#E85D04",
+    borderAccent: "rgba(13,148,136,0.25)",
+    pillBg: "rgba(13,148,136,0.08)",
+    pillBorder: "rgba(13,148,136,0.22)",
+    tabActiveBg: "#0D9488",
     tabBg: "rgba(0,0,0,0.04)",
     tabBorder: "rgba(0,0,0,0.08)",
   },
@@ -127,7 +127,7 @@ const GROUPS = ["All", ...Array.from(new Set(ALL_SKILLS.map((s) => s.group)))];
    GROUP META — icon + color accent per group
 ───────────────────────────────────────────────────────────── */
 const GROUP_META = {
-  "Languages & Frameworks": { icon: "🚀", color: "#FF6B1A" },
+  "Languages & Frameworks": { icon: "🚀", color: "#14B8A6" },
   "Databases":              { icon: "🗄️", color: "#3B82F6" },
   "DevOps & Tools":         { icon: "⚙️", color: "#10B981" },
   "Cloud & Deployment":     { icon: "☁️", color: "#8B5CF6" },
@@ -180,7 +180,7 @@ export default function Skills({ theme = "dark" }) {
       style={{
         background: "transparent",
         padding: "72px 0 80px",
-        fontFamily: "'Sora', sans-serif",
+        fontFamily: "'Outfit', sans-serif",
         position: "relative",
         overflow: "hidden",
         transition: "background 0.4s",
@@ -191,7 +191,7 @@ export default function Skills({ theme = "dark" }) {
       <style>{`
         .skill-tab {
           display: inline-flex; align-items: center; gap: 6px;
-          font-family: 'Sora', sans-serif; font-size: 12.5px; font-weight: 600;
+          font-family: 'Outfit', sans-serif; font-size: 12.5px; font-weight: 600;
           padding: 7px 16px; border-radius: 8px; cursor: pointer;
           border: none; letter-spacing: 0.01em;
           transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;

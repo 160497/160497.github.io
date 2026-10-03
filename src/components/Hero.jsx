@@ -4,45 +4,45 @@ import portrait from "../assets/image.png";
 /* ─── theme tokens ─────────────────────────────────────────── */
 const THEMES = {
   dark: {
-    bg: "#111111",
-    bgCard: "#191919",
-    bgNav: "#151515",
-    accent: "#FF6B1A",
-    accentMid: "#FF8C42",
-    accentDim: "rgba(255,107,26,0.12)",
-    text: "#F2F2F2",
-    textMuted: "#888",
-    textSub: "#AAAAAA",
+    bg: "#0b1220",
+    bgCard: "#121c2e",
+    bgNav: "#0e1729",
+    accent: "#14B8A6",
+    accentMid: "#2DD4BF",
+    accentDim: "rgba(20,184,166,0.12)",
+    text: "#E8F1F6",
+    textMuted: "#7c8fa8",
+    textSub: "#9DB2C7",
     border: "rgba(255,255,255,0.08)",
-    borderAccent: "rgba(255,107,26,0.35)",
-    navIcon: "#999",
-    pillBg: "rgba(255,107,26,0.12)",
-    pillBorder: "rgba(255,107,26,0.3)",
-    frameBorder: "rgba(255,107,26,0.25)",
-    frameGlow: "0 0 40px rgba(255,107,26,0.15), 0 0 80px rgba(255,107,26,0.06)",
-    cornerColor: "#FF6B1A",
-    toggleBg: "#222",
+    borderAccent: "rgba(20,184,166,0.35)",
+    navIcon: "#8a9cb3",
+    pillBg: "rgba(20,184,166,0.12)",
+    pillBorder: "rgba(20,184,166,0.3)",
+    frameBorder: "rgba(20,184,166,0.25)",
+    frameGlow: "0 0 40px rgba(20,184,166,0.15), 0 0 80px rgba(20,184,166,0.06)",
+    cornerColor: "#14B8A6",
+    toggleBg: "#1a2742",
     shadow: "0 24px 48px rgba(0,0,0,0.5)",
   },
   light: {
-    bg: "#F5F2EE",
+    bg: "#EEF4F7",
     bgCard: "#FFFFFF",
     bgNav: "#FFFFFF",
-    accent: "#E85D04",
-    accentMid: "#FF6B1A",
-    accentDim: "rgba(232,93,4,0.10)",
-    text: "#1A1A1A",
-    textMuted: "#777",
-    textSub: "#555",
+    accent: "#0D9488",
+    accentMid: "#14B8A6",
+    accentDim: "rgba(13,148,136,0.10)",
+    text: "#0F2233",
+    textMuted: "#64778a",
+    textSub: "#4a5d70",
     border: "rgba(0,0,0,0.08)",
-    borderAccent: "rgba(232,93,4,0.3)",
-    navIcon: "#777",
-    pillBg: "rgba(232,93,4,0.08)",
-    pillBorder: "rgba(232,93,4,0.25)",
-    frameBorder: "rgba(232,93,4,0.2)",
-    frameGlow: "0 0 40px rgba(232,93,4,0.10), 0 24px 48px rgba(0,0,0,0.08)",
-    cornerColor: "#E85D04",
-    toggleBg: "#E8E4DF",
+    borderAccent: "rgba(13,148,136,0.3)",
+    navIcon: "#64778a",
+    pillBg: "rgba(13,148,136,0.08)",
+    pillBorder: "rgba(13,148,136,0.25)",
+    frameBorder: "rgba(13,148,136,0.2)",
+    frameGlow: "0 0 40px rgba(13,148,136,0.10), 0 24px 48px rgba(0,0,0,0.08)",
+    cornerColor: "#0D9488",
+    toggleBg: "#DCE6EC",
     shadow: "0 24px 48px rgba(0,0,0,0.12)",
   },
 };
@@ -118,10 +118,10 @@ export default function Hero() {
   });
 
   return (
-    <div style={{ fontFamily: "'Sora', 'DM Sans', sans-serif", background: t.bg, minHeight: "100vh", transition: "background 0.4s" }}>
+    <div style={{ fontFamily: "'Outfit', 'DM Sans', sans-serif", background: t.bg, minHeight: "100vh", transition: "background 0.4s" }}>
       {/* Google Fonts */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Lora:ital,wght@1,700&display=swap');
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         ::selection { background: ${t.accent}33; }
@@ -157,7 +157,7 @@ export default function Hero() {
         .btn-primary {
           display: inline-flex; align-items: center; gap: 8px;
           background: ${t.accent}; color: #fff;
-          font-family: 'Sora', sans-serif; font-size: 13.5px; font-weight: 700;
+          font-family: 'Outfit', sans-serif; font-size: 13.5px; font-weight: 700;
           padding: 11px 22px; border-radius: 8px; border: none; cursor: pointer;
           text-decoration: none; letter-spacing: 0.01em;
           transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
@@ -167,7 +167,7 @@ export default function Hero() {
         .btn-outline {
           display: inline-flex; align-items: center; gap: 8px;
           background: transparent; color: ${t.text};
-          font-family: 'Sora', sans-serif; font-size: 13.5px; font-weight: 600;
+          font-family: 'Outfit', sans-serif; font-size: 13.5px; font-weight: 600;
           padding: 10px 20px; border-radius: 8px;
           border: 1.5px solid ${t.border}; cursor: pointer;
           text-decoration: none; letter-spacing: 0.01em;
@@ -211,11 +211,11 @@ export default function Hero() {
             <div style={{
               width: 38, height: 38, borderRadius: 10,
               background: t.accent, display: "flex", alignItems: "center", justifyContent: "center",
-              fontFamily: "'Playfair Display', serif", fontStyle: "italic",
+              fontFamily: "'Lora', serif", fontStyle: "italic",
               fontWeight: 700, fontSize: 17, color: "#fff", letterSpacing: "-0.02em",
             }}>C</div>
             <div>
-              <div style={{ fontWeight: 800, fontSize: 15, color: t.text, letterSpacing: "-0.01em" }}>Chekole</div>
+              <div style={{ fontWeight: 800, fontSize: 15, color: t.text, letterSpacing: "-0.01em" }}>Fanuel</div>
             </div>
           </div>
         </div>
@@ -282,10 +282,10 @@ export default function Hero() {
             {/* Name */}
             <div style={fadeIn(0.12)}>
               <p style={{ fontSize: 15, color: t.textMuted, fontWeight: 400, marginBottom: "0.3rem" }}>
-                Hello, my name is <span style={{ color: t.text, fontWeight: 600 }}>Chekole Ngusalem</span>
+                Hello, my name is <span style={{ color: t.text, fontWeight: 600 }}>Fanuel Negasi</span>
               </p>
               <h1 style={{
-                fontFamily: "'Sora', sans-serif",
+                fontFamily: "'Outfit', sans-serif",
                 fontSize: "clamp(2rem, 3.5vw, 3.2rem)",
                 fontWeight: 800, lineHeight: 1.06,
                 color: t.text, letterSpacing: "-0.03em",
@@ -371,13 +371,13 @@ export default function Hero() {
                 overflow: "hidden",
                 border: `1px solid ${t.frameBorder}`,
                 boxShadow: t.frameGlow,
-                background: "#1a1a1a",
+                background: "#0f2233",
                 aspectRatio: "3/4",
                 width: "100%",
               }}>
                 <img
                   src={portrait}
-                  alt="Chekole Mekonnen"
+                  alt="Fanuel Negasi"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }}
                 />
               </div>
@@ -385,7 +385,7 @@ export default function Hero() {
               {/* "Open to work" floating chip */}
               <div style={{
                 position: "absolute", bottom: 16, left: "50%", transform: "translateX(-50%)",
-                background: theme === "dark" ? "rgba(17,17,17,0.88)" : "rgba(255,255,255,0.88)",
+                background: theme === "dark" ? "rgba(11,18,32,0.88)" : "rgba(255,255,255,0.88)",
                 backdropFilter: "blur(8px)",
                 border: `1px solid ${t.borderAccent}`,
                 borderRadius: 999, padding: "5px 14px",

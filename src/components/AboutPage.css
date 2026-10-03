@@ -23,7 +23,7 @@
 .about-top h1 {
   font-size: 42px;
   margin-bottom: 20px;
-  background: linear-gradient(90deg, var(--accent, #60a5fa), #a78bfa);
+  background: linear-gradient(90deg, var(--accent, #2dd4bf), #38bdf8);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -50,14 +50,14 @@
 .about-section h2 {
   font-size: 20px;
   margin-bottom: 12px;
-  color: var(--accent, #93c5fd);
+  color: var(--accent, #99f6e4);
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 /* ===== TIMELINE ===== */
 .timeline {
-  border-left: 2px solid rgba(147, 197, 253, 0.2);
+  border-left: 2px solid rgba(153, 246, 228, 0.2);
   padding-left: 18px;
   position: relative;
 }
@@ -83,9 +83,9 @@
   top: 18px;
   width: 10px;
   height: 10px;
-  background: var(--accent, #60a5fa);
+  background: var(--accent, #2dd4bf);
   border-radius: 50%;
-  box-shadow: 0 0 10px #60a5fa;
+  box-shadow: 0 0 10px #2dd4bf;
 }
 
 /* hover effect */

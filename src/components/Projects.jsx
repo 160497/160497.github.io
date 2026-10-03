@@ -4,33 +4,34 @@ import agrivitaImg from "../assets/agrivita_image.png";
 import agrispark from "../assets/agrispark_image.png";
 import adwaImg from "../assets/image-adwa.jpg";
 import portfolioImg from "../assets/portifolio-image.png";
+import { GITHUB_URL } from "../lib/profile";
 
 const THEMES = {
   dark: {
-    bg: "#111111",
-    bgSection: "#141414",
-    accent: "#FF6B1A",
-    accentDim: "rgba(255,107,26,0.10)",
-    text: "#F2F2F2",
+    bg: "#0b1220",
+    bgSection: "#0d1627",
+    accent: "#14B8A6",
+    accentDim: "rgba(20,184,166,0.10)",
+    text: "#E8F1F6",
     textMuted: "#666",
-    textSub: "#999",
+    textSub: "#8a9cb3",
     border: "rgba(255,255,255,0.07)",
-    pillBg: "rgba(255,107,26,0.12)",
-    pillBorder: "rgba(255,107,26,0.28)",
+    pillBg: "rgba(20,184,166,0.12)",
+    pillBorder: "rgba(20,184,166,0.28)",
     tabBg: "rgba(255,255,255,0.04)",
     tabBorder: "rgba(255,255,255,0.08)",
   },
   light: {
-    bg: "#F5F2EE",
-    bgSection: "#EDEAE6",
-    accent: "#E85D04",
-    accentDim: "rgba(232,93,4,0.08)",
-    text: "#1A1A1A",
-    textMuted: "#999",
+    bg: "#EEF4F7",
+    bgSection: "#E3EBF0",
+    accent: "#0D9488",
+    accentDim: "rgba(13,148,136,0.08)",
+    text: "#0F2233",
+    textMuted: "#8a9cb3",
     textSub: "#666",
     border: "rgba(0,0,0,0.07)",
-    pillBg: "rgba(232,93,4,0.08)",
-    pillBorder: "rgba(232,93,4,0.22)",
+    pillBg: "rgba(13,148,136,0.08)",
+    pillBorder: "rgba(13,148,136,0.22)",
     tabBg: "rgba(0,0,0,0.04)",
     tabBorder: "rgba(0,0,0,0.08)",
   },
@@ -52,12 +53,6 @@ const PROJECTS = [
     problem: "Institutions manage courses across disconnected tools — spreadsheets for students, drives for materials, email for assignments, and separate meeting links for live classes.",
     description: "A comprehensive learning management system connecting identity, enrollment, courses, assignments, live classes, and communication in one platform. Features Super Admin, Instructor, and Student roles with invitation-based onboarding, GridFS file storage, LiveKit live classes, real-time Socket.IO discussions, and calendar/schedule management.",
     tags: ["Node.js", "Express", "React", "MongoDB", "LiveKit", "Socket.IO", "Docker"],
-    /* Private repo — 404s for visitors without access. Verified instead
-       against the deployed bundle at e-ted-tech.vercel.app, which contains
-       LiveKit, Socket.IO, Super Admin / Instructor / Student, assignments,
-       grading, discussions, invitations, calendar and Express. MongoDB,
-       GridFS and Docker are backend/infra and not observable from a frontend
-       bundle — they are Chekole's own account, not contradicted. */
     githubUrl: "https://github.com/majilanIS/ETedTech",
     liveUrl: "https://e-ted-tech.vercel.app/",
   },
@@ -154,28 +149,28 @@ const PROJECTS = [
        The previous entry claimed a Flask REST API, PostgreSQL and Docker —
        none of which exist in the repo. Kept to what is actually there. */
     problem: "Separating fraudulent transactions from legitimate ones in heavily imbalanced data.",
-    description: "A machine-learning notebook project on transaction fraud detection, from Chekole's data/ML work. Analysis and modelling live in the notebooks — there's no deployed service.",
+    description: "A machine-learning notebook project on transaction fraud detection, from Fanuel's data/ML work. Analysis and modelling live in the notebooks — there's no deployed service.",
     tags: ["Python", "Jupyter Notebook", "Machine Learning"],
     githubUrl: "https://github.com/majilanIS/fraud-detection",
     liveUrl: null,
   },
   {
     id: "portfolio",
-    title: "chekole.dev",
+    title: "fanuel.dev",
     tagline: "This portfolio — built from scratch with React, dark/light theming, and zero templates",
     category: "Frontend / Portfolio",
     icon: "💼",
-    accent: "#FF6B1A",
+    accent: "#14B8A6",
     featured: false,
     filter: "fullstack",
     image: portfolioImg,
     problem: "Templates feel generic and don't showcase individual design or technical signal.",
     description: "Hand-built React portfolio with animated hero, theme toggle, curated project demos and an AI assistant (this site).",
     tags: ["React", "JavaScript", "TypeScript", "Vite", "Supabase", "Vercel"],
-    githubUrl: "https://github.com/majilanIS/majilanIS.github.io",
+    githubUrl: "https://github.com/160497/160497.github.io",
     /* The previous URL (…-tcba.vercel.app) returned 404. This one is verified
        live and matches the homepage set on the repo itself. */
-    liveUrl: "https://majilan-is-github-io.vercel.app/",
+    liveUrl: "https://160497.github.io/",
   },
 ];
 
@@ -220,7 +215,7 @@ export default function Projects({ theme = "dark" }) {
       style={{
         background: "transparent",
         padding: "72px 0 80px",
-        fontFamily: "'Sora', sans-serif",
+        fontFamily: "'Outfit', sans-serif",
         position: "relative",
         overflow: "hidden",
         transition: "background 0.4s",
@@ -232,7 +227,7 @@ export default function Projects({ theme = "dark" }) {
 
         .proj-tab {
           display: inline-flex; align-items: center; gap: 5px;
-          font-family: 'Sora', sans-serif; font-size: 12px; font-weight: 600;
+          font-family: 'Outfit', sans-serif; font-size: 12px; font-weight: 600;
           padding: 6px 15px; border-radius: 8px; cursor: pointer;
           border: none; letter-spacing: 0.01em;
           transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
@@ -348,13 +343,13 @@ export default function Projects({ theme = "dark" }) {
         {/* ── Bottom CTA ── */}
         <div style={{ ...fadeUp(0.3), marginTop: "2.5rem", display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
           <a
-            href="https://github.com/majilanIS/"
+            href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             style={{
               display: "inline-flex", alignItems: "center", gap: 8,
               background: t.accent, color: "#fff",
-              fontFamily: "'Sora', sans-serif", fontSize: 13, fontWeight: 700,
+              fontFamily: "'Outfit', sans-serif", fontSize: 13, fontWeight: 700,
               padding: "10px 20px", borderRadius: 9, textDecoration: "none",
               boxShadow: `0 4px 20px ${t.accent}44`,
               transition: "opacity 0.2s, transform 0.15s",

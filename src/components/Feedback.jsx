@@ -3,40 +3,40 @@ import { supabase } from "../lib/supabaseClient";
 
 const THEMES = {
   dark: {
-    bg: "#111111",
-    bgCard: "#191919",
-    accent: "#FF6B1A",
-    accentMid: "#FF8C42",
-    accentDim: "rgba(255,107,26,0.12)",
-    text: "#F2F2F2",
-    textMuted: "#888",
-    textSub: "#AAAAAA",
+    bg: "#0b1220",
+    bgCard: "#121c2e",
+    accent: "#14B8A6",
+    accentMid: "#2DD4BF",
+    accentDim: "rgba(20,184,166,0.12)",
+    text: "#E8F1F6",
+    textMuted: "#7c8fa8",
+    textSub: "#9DB2C7",
     border: "rgba(255,255,255,0.08)",
-    inputBg: "#141414",
+    inputBg: "#0d1627",
     inputBorder: "rgba(255,255,255,0.10)",
-    inputBorderFocus: "rgba(255,107,26,0.55)",
-    inputText: "#F2F2F2",
-    inputPlaceholder: "#555",
-    pillBg: "rgba(255,107,26,0.10)",
-    pillBorder: "rgba(255,107,26,0.28)",
+    inputBorderFocus: "rgba(20,184,166,0.55)",
+    inputText: "#E8F1F6",
+    inputPlaceholder: "#4a5d70",
+    pillBg: "rgba(20,184,166,0.10)",
+    pillBorder: "rgba(20,184,166,0.28)",
   },
   light: {
-    bg: "#F5F2EE",
+    bg: "#EEF4F7",
     bgCard: "#FFFFFF",
-    accent: "#E85D04",
-    accentMid: "#FF6B1A",
-    accentDim: "rgba(232,93,4,0.08)",
-    text: "#1A1A1A",
-    textMuted: "#777",
-    textSub: "#555",
+    accent: "#0D9488",
+    accentMid: "#14B8A6",
+    accentDim: "rgba(13,148,136,0.08)",
+    text: "#0F2233",
+    textMuted: "#64778a",
+    textSub: "#4a5d70",
     border: "rgba(0,0,0,0.08)",
     inputBg: "#FAFAFA",
     inputBorder: "rgba(0,0,0,0.10)",
-    inputBorderFocus: "rgba(232,93,4,0.5)",
-    inputText: "#1A1A1A",
-    inputPlaceholder: "#BBBBBB",
-    pillBg: "rgba(232,93,4,0.07)",
-    pillBorder: "rgba(232,93,4,0.22)",
+    inputBorderFocus: "rgba(13,148,136,0.5)",
+    inputText: "#0F2233",
+    inputPlaceholder: "#B2C3D4",
+    pillBg: "rgba(13,148,136,0.07)",
+    pillBorder: "rgba(13,148,136,0.22)",
   },
 };
 
@@ -127,14 +127,14 @@ export default function Feedback({ theme = "dark" }) {
       style={{
         background: "transparent",
         padding: "72px 0 80px",
-        fontFamily: "'Sora', sans-serif",
+        fontFamily: "'Outfit', sans-serif",
         width: "100%",
         position: "relative",
         overflow: "hidden",
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
         *,*::before,*::after{box-sizing:border-box}
         .feedback-star {
           appearance: none;
@@ -159,7 +159,7 @@ export default function Feedback({ theme = "dark" }) {
           color: ${t.inputText};
           outline: none;
           transition: border-color 0.2s ease, box-shadow 0.2s ease;
-          font-family: 'Sora', sans-serif;
+          font-family: 'Outfit', sans-serif;
         }
         .feedback-input:focus {
           border-color: ${t.inputBorderFocus};

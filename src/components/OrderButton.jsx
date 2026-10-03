@@ -46,7 +46,7 @@ export default function OrderButton({
       <input type="number" min="1" value={quantity} onChange={(e) => setQuantity(e.target.value)} style={{ width: 80, padding: 8 }} />
       <input placeholder="Your name" value={buyerName} onChange={(e) => setBuyerName(e.target.value)} style={{ padding: 8 }} />
       <input placeholder="Contact (phone/email)" value={buyerContact} onChange={(e) => setBuyerContact(e.target.value)} style={{ padding: 8 }} />
-      <button onClick={placeOrder} disabled={loading} style={{ padding: '10px 14px', background: '#FF6B1A', color: '#fff', border: 'none', borderRadius: 8 }}>
+      <button onClick={placeOrder} disabled={loading} style={{ padding: '10px 14px', background: '#14B8A6', color: '#fff', border: 'none', borderRadius: 8 }}>
         {loading ? 'Placing...' : 'Place order'}
       </button>
       {message && <div style={{ marginLeft: 8 }}>{message}</div>}

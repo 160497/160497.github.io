@@ -20,7 +20,7 @@ export default function SkillCard({
   iconUrl,
   level = 80,
   category = "",
-  accent = "#FF6B1A",
+  accent = "#14B8A6",
   theme = "dark",
   delay = 0,
   compact = false,
@@ -28,12 +28,12 @@ export default function SkillCard({
   const [hovered, setHovered] = useState(false);
 
   const dark = theme === "dark";
-  const bg = dark ? "#191919" : "#FFFFFF";
+  const bg = dark ? "#121c2e" : "#FFFFFF";
   const border = hovered
     ? `1px solid ${accent}66`
     : `1px solid ${dark ? "rgba(255,255,255,0.07)" : "rgba(0,0,0,0.08)"}`;
-  const textPrimary = dark ? "#F2F2F2" : "#1A1A1A";
-  const textMuted = dark ? "#777" : "#888";
+  const textPrimary = dark ? "#E8F1F6" : "#0F2233";
+  const textMuted = dark ? "#64778a" : "#7c8fa8";
   const barBg = dark ? "rgba(255,255,255,0.06)" : "rgba(0,0,0,0.07)";
 
   /* Compact: a square tile — icon, name, then the level bar pinned to the
@@ -112,7 +112,7 @@ export default function SkillCard({
         >
           <span
             style={{
-              fontFamily: "'Sora', sans-serif", fontWeight: 700, fontSize: 11,
+              fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: 11,
               color: hovered ? accent : textPrimary,
               letterSpacing: "-0.01em", transition: "color 0.2s",
               textAlign: "center", lineHeight: 1.2,
@@ -237,7 +237,7 @@ export default function SkillCard({
       {/* Name */}
       <div
         style={{
-          fontFamily: "'Sora', sans-serif",
+          fontFamily: "'Outfit', sans-serif",
           fontWeight: 700,
           fontSize: 13.5,
           color: hovered ? accent : textPrimary,

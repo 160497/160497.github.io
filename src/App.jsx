@@ -40,30 +40,30 @@ function App() {
   // central theme tokens (minimal set used across components/CSS)
   const THEMES = {
     dark: {
-      bg: "#111111",
-      bgCard: "#191919",
-      bgNav: "#151515",
-      accent: "#FF6B1A",
-      accentMid: "#FF8C42",
-      accentDim: "rgba(255,107,26,0.12)",
-      text: "#F2F2F2",
-      textMuted: "#888",
-      textSub: "#AAAAAA",
+      bg: "#0b1220",
+      bgCard: "#121c2e",
+      bgNav: "#0e1729",
+      accent: "#14B8A6",
+      accentMid: "#2DD4BF",
+      accentDim: "rgba(20,184,166,0.12)",
+      text: "#E8F1F6",
+      textMuted: "#7c8fa8",
+      textSub: "#9DB2C7",
       border: "rgba(255,255,255,0.08)",
-      borderAccent: "rgba(255,107,26,0.35)",
+      borderAccent: "rgba(20,184,166,0.35)",
     },
     light: {
-      bg: "#F5F2EE",
+      bg: "#EEF4F7",
       bgCard: "#FFFFFF",
       bgNav: "#FFFFFF",
-      accent: "#E85D04",
-      accentMid: "#FF6B1A",
-      accentDim: "rgba(232,93,4,0.10)",
-      text: "#1A1A1A",
-      textMuted: "#777",
-      textSub: "#555",
+      accent: "#0D9488",
+      accentMid: "#14B8A6",
+      accentDim: "rgba(13,148,136,0.10)",
+      text: "#0F2233",
+      textMuted: "#64778a",
+      textSub: "#4a5d70",
       border: "rgba(0,0,0,0.08)",
-      borderAccent: "rgba(232,93,4,0.3)",
+      borderAccent: "rgba(13,148,136,0.3)",
     },
   };
 
@@ -112,12 +112,12 @@ function App() {
             width: 60,
             height: 60,
             borderRadius: "50%",
-            background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
-            border: "2px solid rgba(96, 165, 250, 0.6)",
+            background: "linear-gradient(135deg, #2dd4bf, #0d9488)",
+            border: "2px solid rgba(45, 212, 191, 0.6)",
             color: "#fff",
             fontSize: 28,
             cursor: "pointer",
-            boxShadow: "0 8px 24px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255,255,255,0.1)",
+            boxShadow: "0 8px 24px rgba(13, 148, 136, 0.4), inset 0 1px 0 rgba(255,255,255,0.1)",
             zIndex: 999,
             transition: "all 0.3s ease",
             display: "flex",
@@ -126,11 +126,11 @@ function App() {
           }}
           onMouseEnter={(e) => {
             e.target.style.transform = "scale(1.15)";
-            e.target.style.boxShadow = "0 12px 32px rgba(59, 130, 246, 0.6), inset 0 1px 0 rgba(255,255,255,0.1)";
+            e.target.style.boxShadow = "0 12px 32px rgba(13, 148, 136, 0.6), inset 0 1px 0 rgba(255,255,255,0.1)";
           }}
           onMouseLeave={(e) => {
             e.target.style.transform = "scale(1)";
-            e.target.style.boxShadow = "0 8px 24px rgba(59, 130, 246, 0.4), inset 0 1px 0 rgba(255,255,255,0.1)";
+            e.target.style.boxShadow = "0 8px 24px rgba(13, 148, 136, 0.4), inset 0 1px 0 rgba(255,255,255,0.1)";
           }}
           aria-label="Open AI Chat"
         >

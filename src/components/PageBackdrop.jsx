@@ -21,24 +21,24 @@ import StarFlock from "./StarFlock";
    in and out on top of the dark one. */
 const PALETTES = {
   dark: {
-    base: "linear-gradient(180deg, #171717 0%, #131313 28%, #101010 62%, #0C0C0C 100%)",
-    cool: "#3B82F6",
+    base: "linear-gradient(180deg, #101a2c 0%, #0d1525 28%, #0a1120 62%, #070D19 100%)",
+    cool: "#38BDF8",
     orb1: "22", orb2: "16", orb3: "14",
     dot: "rgba(255,255,255,0.05)",
     vignette:
       "radial-gradient(125% 90% at 50% 45%, transparent 40%, rgba(0,0,0,0.32) 100%)",
   },
   light: {
-    base: "linear-gradient(180deg, #FBF9F6 0%, #F7F4F0 30%, #F2EFE9 66%, #EBE7E0 100%)",
-    cool: "#6366F1",
+    base: "linear-gradient(180deg, #F8FBFC 0%, #F2F7F9 30%, #E9F0F4 66%, #E0E9EE 100%)",
+    cool: "#0EA5E9",
     orb1: "16", orb2: "10", orb3: "0E",
     dot: "rgba(0,0,0,0.045)",
     vignette:
-      "radial-gradient(125% 90% at 50% 45%, transparent 45%, rgba(120,110,95,0.10) 100%)",
+      "radial-gradient(125% 90% at 50% 45%, transparent 45%, rgba(80,105,125,0.10) 100%)",
   },
 };
 
-export default function PageBackdrop({ theme = "dark", accent = "#FF6B1A" }) {
+export default function PageBackdrop({ theme = "dark", accent = "#14B8A6" }) {
   /* Why both palettes are rendered instead of one that changes:
      `background-image` is NOT an animatable CSS property, so a gradient
      cannot be transitioned — `transition: background` on a gradient does

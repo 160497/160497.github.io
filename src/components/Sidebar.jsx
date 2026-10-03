@@ -3,46 +3,46 @@ import React, { useState } from "react";
 /* ─── theme tokens ─────────────────────────────────────────── */
 const THEMES = {
   dark: {
-    bg: "#111111",
-    bgCard: "#191919",
-    bgNav: "#151515",
-    accent: "#FF6B1A",
-    accentMid: "#FF8C42",
-    accentDim: "rgba(255,107,26,0.12)",
-    text: "#F2F2F2",
-    textMuted: "#888",
-    textSub: "#AAAAAA",
+    bg: "#0b1220",
+    bgCard: "#121c2e",
+    bgNav: "#0e1729",
+    accent: "#14B8A6",
+    accentMid: "#2DD4BF",
+    accentDim: "rgba(20,184,166,0.12)",
+    text: "#E8F1F6",
+    textMuted: "#7c8fa8",
+    textSub: "#9DB2C7",
     border: "rgba(255,255,255,0.08)",
-    borderAccent: "rgba(255,107,26,0.35)",
-    navIcon: "#999",
-    pillBg: "rgba(255,107,26,0.12)",
-    pillBorder: "rgba(255,107,26,0.3)",
-    frameBorder: "rgba(255,107,26,0.25)",
-    frameGlow: "0 0 40px rgba(255,107,26,0.15), 0 0 80px rgba(255,107,26,0.06)",
-    cornerColor: "#FF6B1A",
-    toggleBg: "#222",
+    borderAccent: "rgba(20,184,166,0.35)",
+    navIcon: "#8a9cb3",
+    pillBg: "rgba(20,184,166,0.12)",
+    pillBorder: "rgba(20,184,166,0.3)",
+    frameBorder: "rgba(20,184,166,0.25)",
+    frameGlow: "0 0 40px rgba(20,184,166,0.15), 0 0 80px rgba(20,184,166,0.06)",
+    cornerColor: "#14B8A6",
+    toggleBg: "#1a2742",
     shadow: "0 24px 48px rgba(0,0,0,0.5)",
   },
 
   light: {
-    bg: "#F5F2EE",
+    bg: "#EEF4F7",
     bgCard: "#FFFFFF",
     bgNav: "#FFFFFF",
-    accent: "#E85D04",
-    accentMid: "#FF6B1A",
-    accentDim: "rgba(232,93,4,0.10)",
-    text: "#1A1A1A",
-    textMuted: "#777",
-    textSub: "#555",
+    accent: "#0D9488",
+    accentMid: "#14B8A6",
+    accentDim: "rgba(13,148,136,0.10)",
+    text: "#0F2233",
+    textMuted: "#64778a",
+    textSub: "#4a5d70",
     border: "rgba(0,0,0,0.08)",
-    borderAccent: "rgba(232,93,4,0.3)",
-    navIcon: "#777",
-    pillBg: "rgba(232,93,4,0.08)",
-    pillBorder: "rgba(232,93,4,0.25)",
-    frameBorder: "rgba(232,93,4,0.2)",
-    frameGlow: "0 0 40px rgba(232,93,4,0.10), 0 24px 48px rgba(0,0,0,0.08)",
-    cornerColor: "#E85D04",
-    toggleBg: "#E8E4DF",
+    borderAccent: "rgba(13,148,136,0.3)",
+    navIcon: "#64778a",
+    pillBg: "rgba(13,148,136,0.08)",
+    pillBorder: "rgba(13,148,136,0.25)",
+    frameBorder: "rgba(13,148,136,0.2)",
+    frameGlow: "0 0 40px rgba(13,148,136,0.10), 0 24px 48px rgba(0,0,0,0.08)",
+    cornerColor: "#0D9488",
+    toggleBg: "#DCE6EC",
     shadow: "0 24px 48px rgba(0,0,0,0.12)",
   },
 };
@@ -70,7 +70,7 @@ export default function Sidebar({ theme, setTheme }) {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Lora:ital,wght@1,700&display=swap');
 
         * {
           box-sizing: border-box;
@@ -301,7 +301,7 @@ export default function Sidebar({ theme, setTheme }) {
           zIndex: 100,
           padding: "24px 0",
           transition: "all 0.4s ease",
-          fontFamily: "'Sora', sans-serif",
+          fontFamily: "'Outfit', sans-serif",
           backdropFilter: "blur(20px)",
         }}
       >
@@ -323,7 +323,7 @@ export default function Sidebar({ theme, setTheme }) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Lora', serif",
                 fontStyle: "italic",
                 fontWeight: 700,
                 fontSize: 18,
@@ -344,7 +344,7 @@ export default function Sidebar({ theme, setTheme }) {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Chekole
+                Fanuel
               </div>
 
               <div

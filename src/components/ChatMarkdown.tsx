@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { GITHUB_URL, GITHUB_USER } from "../lib/profile";
 
 /**
  * ChatMarkdown — renders the assistant's markdown into React elements.
@@ -25,16 +26,16 @@ type Colors = {
 };
 
 /* ── Link sanitiser ───────────────────────────────────────────────
-   The model repeatedly reconstructs the GitHub username from Chekole's
-   name — "Chekole-Ngusalem", "chekole-m" — instead of copying the real
+   The model repeatedly reconstructs the GitHub username from Fanuel's
+   name — "fanuel-negasi", "fanuelnegasi" — instead of copying the real
    handle, which sends visitors to a 404 or, worse, a stranger's account.
    Prompt rules alone did not hold, so this is enforced in code.
 
    Any github.com URL whose owner is not one of the real accounts is
    rewritten to the canonical profile. Owners that ARE real pass through
    untouched, so repo links keep working. */
-const GITHUB_PROFILE = "https://github.com/majilanIS";
-const GITHUB_OWNERS = ["majilanis", "ereceiptset-del"];
+const GITHUB_PROFILE = GITHUB_URL;
+const GITHUB_OWNERS = [GITHUB_USER.toLowerCase(), "majilanis", "ereceiptset-del"];
 
 const GITHUB_URL_RE =
   /(?:https?:\/\/)?(?:www\.)?github\.com\/([A-Za-z0-9._-]+)((?:\/[A-Za-z0-9._-]+)*)\/?/g;
@@ -55,10 +56,10 @@ export function sanitizeLinks(src: string): string {
     .replace(LINKEDIN_URL_RE, (_full, slug: string) => `https://www.linkedin.com/${slug}`);
 }
 
-export default function ChatMarkdown({ content, theme = "dark", accent = "#60a5fa" }: Props) {
+export default function ChatMarkdown({ content, theme = "dark", accent = "#2dd4bf" }: Props) {
   const dark = theme === "dark";
   const c: Colors = {
-    text: dark ? "#e0e7ff" : "#1a1a1a",
+    text: dark ? "#e0e7ff" : "#0f2233",
     muted: dark ? "#a5b4fc" : "#64748b",
     codeBg: dark ? "rgba(255,255,255,0.10)" : "rgba(0,0,0,0.06)",
     codeBorder: dark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.08)",
