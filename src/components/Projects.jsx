@@ -41,43 +41,21 @@ const THEMES = {
    PROJECTS DATA
 ───────────────────────────────────────────────────────────── */
 const PROJECTS = [
-  {
-    id: "LearnOS",
-    title: "LearnOS",
-    tagline: "Full-featured LMS with real-time classes, grading, and role-based access",
-    category: "Education / EdTech",
-    icon: "📚",
-    accent: "#3B82F6",
-    featured: true,
-    filter: "fullstack",
-    problem: "Institutions manage courses across disconnected tools — spreadsheets for students, drives for materials, email for assignments, and separate meeting links for live classes.",
-    description: "A comprehensive learning management system connecting identity, enrollment, courses, assignments, live classes, and communication in one platform. Features Super Admin, Instructor, and Student roles with invitation-based onboarding, GridFS file storage, LiveKit live classes, real-time Socket.IO discussions, and calendar/schedule management.",
-    tags: ["Node.js", "Express", "React", "MongoDB", "LiveKit", "Socket.IO", "Docker"],
-    githubUrl: "https://github.com/majilanIS/ETedTech",
-    liveUrl: "https://e-ted-tech.vercel.app/",
-  },
-  {
-    id: "AIBOS",
-    title: "AIBOS eReceipt",
-    tagline: "All-in-one business management platform for SACCOs, cafés, insurance and construction",
-    category: "Business Software / ERP",
-    icon: "🧾",
-    accent: "#6366F1",
-    featured: false,
-    filter: "fullstack",
-    problem: "Small businesses and cooperatives run operations across disconnected tools, re-entering the same transaction in each one.",
-    /* Description taken from the deployed app's own meta description:
-       "AIBOS — all-in-one platform for SACCOs, cafes, insurance, construction
-       and general business management." Receipt/ERP/QR/invoice/tax handling
-       and Firebase+Firestore are all confirmed present in the shipped bundle. */
-    description: "An all-in-one business management platform covering SACCOs, cafés, insurance, construction and general business operations, with receipt, invoice and tax handling built in. Built during the Safe Transport internship across separate backend and frontend services.",
-    tags: ["React", "Firebase", "Firestore", "ERP"],
-    /* Private company repos — both 404 for visitors without access. */
-    githubUrl: "https://github.com/ereceiptset-del/AIBOS-back",
-    githubUrl2: "https://github.com/ereceiptset-del/AIBOS-front",
-    repoLabels: ["Backend", "Frontend"],
-    liveUrl: "https://aibos-ereceipt.web.app/",
-  },
+  // {
+  //   id: "LearnOS",
+  //   title: "LearnOS",
+  //   tagline: "Full-featured LMS with real-time classes, grading, and role-based access",
+  //   category: "Education / EdTech",
+  //   icon: "📚",
+  //   accent: "#3B82F6",
+  //   featured: true,
+  //   filter: "fullstack",
+  //   problem: "Institutions manage courses across disconnected tools — spreadsheets for students, drives for materials, email for assignments, and separate meeting links for live classes.",
+  //   description: "A comprehensive learning management system connecting identity, enrollment, courses, assignments, live classes, and communication in one platform. Features Super Admin, Instructor, and Student roles with invitation-based onboarding, GridFS file storage, LiveKit live classes, real-time Socket.IO discussions, and calendar/schedule management.",
+  //   tags: ["Node.js", "Express", "React", "MongoDB", "LiveKit", "Socket.IO", "Docker"],
+  //   githubUrl: "https://github.com/majilanIS/ETedTech",
+  //   liveUrl: "https://e-ted-tech.vercel.app/",
+  // },
   {
     id: "agrivita",
     title: "AgriVita",
