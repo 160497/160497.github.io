@@ -1,4 +1,4 @@
-# Chekole Portfolio
+# Fanuel Portfolio
 
 React + Vite portfolio with an AI chat widget, certificate showcase, and Supabase-powered contact + notification system.
 
@@ -74,7 +74,7 @@ supabase functions deploy gemini-chat
 Required Supabase secrets:
 
 ```bash
-supabase secrets set RESEND_API_KEY=... NOTIFY_TO=chekolengusalem@gmail.com RESEND_FROM="Portfolio <onboarding@resend.dev>"
+supabase secrets set RESEND_API_KEY=... NOTIFY_TO=fanuelnegasi1785@gmail.com RESEND_FROM="Portfolio <onboarding@resend.dev>"
 ```
 
 ## Deploy

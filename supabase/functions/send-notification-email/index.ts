@@ -33,7 +33,7 @@ serve(async (req: Request) => {
     }
 
     const resendFrom = Deno.env.get("RESEND_FROM") || "Portfolio <onboarding@resend.dev>";
-    const notifyTo = Deno.env.get("NOTIFY_TO") || "chekolengusalem@gmail.com";
+    const notifyTo = Deno.env.get("NOTIFY_TO") || "fanuelnegasi1785@gmail.com";
 
     const metaLines = Object.entries(metadata).map(([k, v]) => `<strong>${k}:</strong> ${String(v)}`).join("<br />");
 

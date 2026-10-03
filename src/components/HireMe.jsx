@@ -1,53 +1,54 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabaseClient";
+import { GITHUB_URL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "../lib/profile";
 
 /* ─── theme tokens (same as Sidebar / HeroContent) ─────────── */
 const THEMES = {
   dark: {
-    bg: "#111111",
-    bgCard: "#191919",
-    bgNav: "#151515",
-    accent: "#FF6B1A",
-    accentMid: "#FF8C42",
-    accentDim: "rgba(255,107,26,0.12)",
-    accentDimHover: "rgba(255,107,26,0.20)",
-    text: "#F2F2F2",
-    textMuted: "#888",
-    textSub: "#AAAAAA",
+    bg: "#0b1220",
+    bgCard: "#121c2e",
+    bgNav: "#0e1729",
+    accent: "#14B8A6",
+    accentMid: "#2DD4BF",
+    accentDim: "rgba(20,184,166,0.12)",
+    accentDimHover: "rgba(20,184,166,0.20)",
+    text: "#E8F1F6",
+    textMuted: "#7c8fa8",
+    textSub: "#9DB2C7",
     border: "rgba(255,255,255,0.08)",
-    borderHover: "rgba(255,107,26,0.45)",
-    borderAccent: "rgba(255,107,26,0.35)",
-    inputBg: "#141414",
+    borderHover: "rgba(20,184,166,0.45)",
+    borderAccent: "rgba(20,184,166,0.35)",
+    inputBg: "#0d1627",
     inputBorder: "rgba(255,255,255,0.10)",
-    inputBorderFocus: "rgba(255,107,26,0.55)",
-    inputText: "#F2F2F2",
-    inputPlaceholder: "#555",
-    labelColor: "#AAAAAA",
-    pillBg: "rgba(255,107,26,0.10)",
-    cornerColor: "#FF6B1A",
+    inputBorderFocus: "rgba(20,184,166,0.55)",
+    inputText: "#E8F1F6",
+    inputPlaceholder: "#4a5d70",
+    labelColor: "#9DB2C7",
+    pillBg: "rgba(20,184,166,0.10)",
+    cornerColor: "#14B8A6",
   },
   light: {
-    bg: "#F5F2EE",
+    bg: "#EEF4F7",
     bgCard: "#FFFFFF",
     bgNav: "#FFFFFF",
-    accent: "#E85D04",
-    accentMid: "#FF6B1A",
-    accentDim: "rgba(232,93,4,0.08)",
-    accentDimHover: "rgba(232,93,4,0.15)",
-    text: "#1A1A1A",
-    textMuted: "#777",
-    textSub: "#555",
+    accent: "#0D9488",
+    accentMid: "#14B8A6",
+    accentDim: "rgba(13,148,136,0.08)",
+    accentDimHover: "rgba(13,148,136,0.15)",
+    text: "#0F2233",
+    textMuted: "#64778a",
+    textSub: "#4a5d70",
     border: "rgba(0,0,0,0.08)",
-    borderHover: "rgba(232,93,4,0.45)",
-    borderAccent: "rgba(232,93,4,0.3)",
+    borderHover: "rgba(13,148,136,0.45)",
+    borderAccent: "rgba(13,148,136,0.3)",
     inputBg: "#FAFAFA",
     inputBorder: "rgba(0,0,0,0.10)",
-    inputBorderFocus: "rgba(232,93,4,0.5)",
-    inputText: "#1A1A1A",
-    inputPlaceholder: "#BBBBBB",
+    inputBorderFocus: "rgba(13,148,136,0.5)",
+    inputText: "#0F2233",
+    inputPlaceholder: "#B2C3D4",
     labelColor: "#777777",
-    pillBg: "rgba(232,93,4,0.07)",
-    cornerColor: "#E85D04",
+    pillBg: "rgba(13,148,136,0.07)",
+    cornerColor: "#0D9488",
   },
 };
 
@@ -56,8 +57,8 @@ const CONTACTS = [
   {
     key: "email",
     label: "Email",
-    value: "chekolengusalem@gmail.com",
-    href: "mailto:chekolengusalem@gmail.com",
+    value: "fanuelnegasi1785@gmail.com",
+    href: "mailto:fanuelnegasi1785@gmail.com",
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -68,8 +69,8 @@ const CONTACTS = [
   {
     key: "github",
     label: "GitHub",
-    value: "github.com/chekole",
-    href: "https://github.com/majilanIS",
+    value: GITHUB_URL.replace("https://", ""),
+    href: GITHUB_URL,
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 .5C5.73.5.75 5.48.75 11.76c0 4.96 3.22 9.17 7.7 10.65.56.1.76-.24.76-.54 0-.27-.01-1-.01-1.95-3.13.68-3.8-1.51-3.8-1.51-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .17 1.55.93 1.55.93.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.71-1.49-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.47.11-3.06 0 0 .95-.3 3.12 1.15a10.8 10.8 0 0 1 2.84-.38c.96 0 1.92.13 2.84.38 2.16-1.45 3.11-1.15 3.11-1.15.61 1.59.23 2.77.12 3.06.72.79 1.16 1.79 1.16 3.02 0 4.32-2.64 5.27-5.15 5.55.4.35.76 1.05.76 2.12 0 1.53-.01 2.77-.01 3.15 0 .3.2.65.77.54 4.48-1.48 7.69-5.69 7.69-10.65C23.25 5.48 18.27.5 12 .5z" />
@@ -79,8 +80,8 @@ const CONTACTS = [
   {
     key: "instagram",
     label: "Instagram",
-    value: "@chekole26",
-    href: "https://instagram.com/chekole26",
+    value: INSTAGRAM_HANDLE,
+    href: INSTAGRAM_URL,
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -173,7 +174,7 @@ export default function HireMe({ theme = "dark" }) {
     padding: "10px 14px",
     fontSize: 13.5,
     color: t.inputText,
-    fontFamily: "'Sora', sans-serif",
+    fontFamily: "'Outfit', sans-serif",
     outline: "none",
     transition: "border-color 0.2s",
     boxSizing: "border-box",
@@ -183,7 +184,7 @@ export default function HireMe({ theme = "dark" }) {
     <div
       id="hire-me"
       style={{
-        fontFamily: "'Sora', 'DM Sans', sans-serif",
+        fontFamily: "'Outfit', 'DM Sans', sans-serif",
         background: "transparent",
         minHeight: "100vh",
         display: "flex",
@@ -194,7 +195,7 @@ export default function HireMe({ theme = "dark" }) {
       }}
     >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         ::placeholder { color: ${t.inputPlaceholder}; }
         .contact-link {
@@ -214,7 +215,7 @@ export default function HireMe({ theme = "dark" }) {
           display: inline-flex; align-items: center; justify-content: center; gap: 8px;
           width: 100%; padding: 12px 24px; border-radius: 8px;
           background: ${t.accent}; color: #fff;
-          font-family: 'Sora', sans-serif; font-size: 14px; font-weight: 700;
+          font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700;
           border: none; cursor: pointer; letter-spacing: 0.01em;
           transition: background 0.2s, transform 0.15s, opacity 0.2s;
         }
@@ -362,7 +363,7 @@ export default function HireMe({ theme = "dark" }) {
                       onChange={handleChange}
                       onFocus={() => setFocusedField("name")}
                       onBlur={() => setFocusedField(null)}
-                      placeholder="Chekole Ngusalem"
+                      placeholder="Fanuel Negasi"
                       style={inputStyle("name")}
                     />
                     {errors.name && <p style={{ fontSize: 11.5, color: "#e05252", marginTop: 4 }}>{errors.name}</p>}
@@ -380,7 +381,7 @@ export default function HireMe({ theme = "dark" }) {
                       onChange={handleChange}
                       onFocus={() => setFocusedField("email")}
                       onBlur={() => setFocusedField(null)}
-                      placeholder="chekole@example.com"
+                      placeholder="fanuel@example.com"
                       style={inputStyle("email")}
                     />
                     {errors.email && <p style={{ fontSize: 11.5, color: "#e05252", marginTop: 4 }}>{errors.email}</p>}
