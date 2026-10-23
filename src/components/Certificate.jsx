@@ -2,36 +2,28 @@ import { useState } from "react";
 
 const CERTIFICATES = [
     {
-		title: "KAIM - Program Detail",
-		file: new URL("../assets/certificates/KAIM - Program Detail.pdf", import.meta.url).href,
+		title: "Day Dream Inf Hackathon",
+		file: new URL("../assets/certificate/day_dream_inf_hack.pdf", import.meta.url).href,
     },
     {
-        title: "KAIM-Certificate",
-        file: new URL("../assets/certificates/KAIM-Certificate.pdf", import.meta.url).href,
+        title: "FreeCodeCamp Data Structure and Algorithm",
+        file: new URL("../assets/certificate/Java-script Algorithm and  Data Structure.pdf", import.meta.url).href,
     },
     {
         title: "RAG Program",
-        file: new URL("../assets/certificates/rag-program.pdf", import.meta.url).href,
+        file: new URL("../assets/certificate/6_day_rag.pdf", import.meta.url).href,
     },
-{
-		title: "AI certificate on Udacity",
-		file: new URL("../assets/certificates/AI certificate on Udacity.pdf", import.meta.url).href,
+    {
+		title: "Letter of Support_Partnership - Fanuel Welehariat",
+		file: new URL("../assets/certificate/Letter of Support_Partnership - Fanuel Welehariat (4).pdf", import.meta.url).href,
 	},
 	{
-		title: "Fundamental for Programming Certificate of Udacity",
-		file: new URL("../assets/certificates/Fundamental for Programming Certificate of Udacity.pdf", import.meta.url).href,
-	},
-	{
-		title: "Certificate of appreciation",
-		file: new URL("../assets/certificates/Certificate_of_appreciation.pdf", import.meta.url).href,
-	},
-	{
-		title: "Certificate Printed",
-		file: new URL("../assets/certificates/CertificatePrinted.pdf", import.meta.url).href,
+		title: "FreeCodeCamp Responsive Web Design",
+		file: new URL("../assets/certificate/Fanuel Responsive Web Design.pdf", import.meta.url).href,
 	},
 	{
 		title: "FreeCodeCamp",
-		file: new URL("../assets/certificates/FreeCodeCamp.pdf", import.meta.url).href,
+		file: new URL("../assets/certificate/Back-End Development and API.pdf", import.meta.url).href,
 	},
 ];
 

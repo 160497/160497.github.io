@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 import agrivitaImg from "../assets/agrivita_image.png";
 import agrispark from "../assets/agrispark_image.png";
 import adwaImg from "../assets/image-adwa.jpg";
-import portfolioImg from "../assets/portifolio-image.png";
+import portfolioImg from "../assets/portfolio_image.png";
 import { GITHUB_URL } from "../lib/profile";
 
 const THEMES = {

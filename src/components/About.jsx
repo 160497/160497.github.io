@@ -28,58 +28,40 @@ const THEMES = {
 
 const experience = [
   {
-    title: "YEEAP AI – AI Studies",
-    time: "01/2026 – 03/2026",
-    location: "Online",
-    desc: "Completed a 3-month course on modern AI systems, LLMs, and real-world AI applications.",
+    title: "INSA Cyber Talent Internship",
+    time: "2025 – 2026",
+    location: "Ethiopia",
+    desc: "Selected for an intensive cybersecurity and software development program, building skills in algorithms, full-stack development, and real-world software engineering. Led development of a ride-sharing application as a capstone project.",
   },
   {
-    title: "Safe Transport – eReceipt (AIBOS)",
-    time: "3 Months",
-    location: "In Person",
-    desc: "Practical 3-month project work on ERP integration — built the AIBOS eReceipt platform to issue branded digital receipts for real business transactions.",
-  },
-  {
-    title: "10 Academy × Kifiya",
-    time: "12/2025 – 03/2026",
+    title: "ISHUB Education Team",
+    time: "2026",
     location: "Addis Ababa, Ethiopia",
-    desc: "Data Engineering, Machine Learning, MLOps, RAG systems, and pipelines.",
-  },
-  {
-    title: "ISHUB AI Workshop",
-    time: "02/2026 – 03/2026",
-    location: "Addis Ababa, Ethiopia",
-    desc: "RAG systems, LLM limitations, and AI assistant projects.",
-  },
-  {
-    title: "CodeAlpha Internship",
-    time: "09/2025 – 11/2025",
-    location: "Remote",
-    desc: "MERN stack backend development and API systems.",
-  },
+    desc: "Contributed to technology education initiatives, supporting learning activities and helping students develop programming and AI skills.",
+  }
 ];
 
 const education = [
   {
     title: "Addis Ababa University",
-    time: "Expected 06/2027",
-    desc: "Bachelor of Information Science",
+    time: "2024 – Present",
+    desc: "Bachelor of Information Science; studying computing, information systems, and technology.",
   },
   {
-    title: "Self-Learning & Online Courses",
+    title: "Kallamino Special High School",
+    time: "09/2018 – 07/2024",
+    desc: "Completed a specialized STEM-focused secondary education, developing a strong foundation in mathematics, science, analytical thinking, and problem-solving.",
+  },
+  {
+    title: "freeCodeCamp",
     time: "Ongoing",
-    desc: "Self-directed learning on the web — actively progressing through Machine Learning, Data, and Deep Learning.",
+    desc: "Self-directed learning in web development, programming, and software engineering through hands-on coding exercises and projects.",
   },
   {
-    title: "ISHUB Backend Camp",
-    time: "07/2025 – 09/2025",
-    desc: "Express.js & MongoDB backend development",
-  },
-  {
-    title: "Evangadi Full-Stack Program",
-    time: "01/2025 – 04/2025",
-    desc: "Full-stack web development",
-  },
+    title: "ISHUB AI Workshop",
+    time: "2026",
+    desc: "Explored large language models, retrieval-augmented generation (RAG), AI assistant development, and the limitations of AI systems through practical projects.",
+  }
 ];
 export default function AboutPage({ theme = "dark" }) {
   const t = THEMES[theme] || THEMES.dark;

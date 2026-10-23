@@ -354,7 +354,7 @@ export default function HeroContent({ theme }) {
               </svg>
               View my projects
             </a>
-            <a href="https://drive.google.com/file/d/1dEx_QWowNZWXkNxhOlzBocfnrUWyIbWH/view?usp=sharing" className="btn-outline" style={{ color: t.text, borderColor: t.border }}>
+            <a href="https://drive.google.com/file/d/12dfN641BTwjK-NtpoKIv2Jw-jwhKbQl4/view?usp=sharing" className="btn-outline" style={{ color: t.text, borderColor: t.border }} target="_blank" rel="noopener noreferrer">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                 <polyline points="7 10 12 15 17 10" />
@@ -384,16 +384,7 @@ export default function HeroContent({ theme }) {
                     <path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 24h4V7h-4v17zM8.5 7v17h4v-9.3c0-2.3.8-3.9 2.9-3.9 2 0 2.1 1.8 2.1 4v9.2h4V13c0-5.6-3-8.2-7-8.2-3.2 0-4.6 1.8-5.1 3.1V7h-1z" />
                   </svg>
                 ),
-              },
-              {
-                label: "X",
-                href: "https://x.com/",
-                icon: (
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M23 3.01a10.9 10.9 0 0 1-3.14.86A4.93 4.93 0 0 0 22.4.36a9.86 9.86 0 0 1-3.13 1.2 4.92 4.92 0 0 0-8.39 4.48A13.96 13.96 0 0 1 1.64.89 4.92 4.92 0 0 0 3.2 6.7a4.9 4.9 0 0 1-2.23-.62v.06a4.92 4.92 0 0 0 3.95 4.82 4.9 4.9 0 0 1-2.22.08 4.92 4.92 0 0 0 4.6 3.42A9.86 9.86 0 0 1 0 19.54a13.94 13.94 0 0 0 7.55 2.21c9.05 0 14-7.5 14-14v-.64A10.02 10.02 0 0 0 23 3.01z" />
-                  </svg>
-                ),
-              },
+              }
             ].map(({ label, icon, href }) => (
               <a
                 key={label}

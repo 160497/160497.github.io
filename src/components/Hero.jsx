@@ -206,20 +206,45 @@ export default function Hero() {
         padding: "28px 0", transition: "background 0.4s, border-color 0.4s",
       }}>
         {/* Logo */}
-        <div style={{ padding: "0 24px 28px", borderBottom: `1px solid ${t.border}` }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <div style={{
+          padding: "0 24px 28px",
+          borderBottom: `1px solid ${t.border}`
+        }}>
+          <div style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 10
+          }}>
             <div style={{
-              width: 38, height: 38, borderRadius: 10,
-              background: t.accent, display: "flex", alignItems: "center", justifyContent: "center",
-              fontFamily: "'Lora', serif", fontStyle: "italic",
-              fontWeight: 700, fontSize: 17, color: "#fff", letterSpacing: "-0.02em",
-            }}>C</div>
+              width: 38,
+              height: 38,
+              borderRadius: 10,
+              background: t.accent,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontFamily: "'Lora', serif",
+              fontStyle: "italic",
+              fontWeight: 700,
+              fontSize: 17,
+              color: "#fff",
+              letterSpacing: "-0.02em",
+            }}>
+              F
+            </div>
+
             <div>
-              <div style={{ fontWeight: 800, fontSize: 15, color: t.text, letterSpacing: "-0.01em" }}>Fanuel</div>
+              <div style={{
+                fontWeight: 800,
+                fontSize: 15,
+                color: t.text,
+                letterSpacing: "-0.01em"
+              }}>
+                Fanuel
+              </div>
             </div>
           </div>
         </div>
-
         {/* Nav links */}
         <nav style={{ flex: 1, padding: "20px 24px", display: "flex", flexDirection: "column", gap: 2 }}>
           {[
@@ -315,8 +340,27 @@ export default function Hero() {
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
                 View my projects
               </a>
-              <a href="/cv.pdf" className="btn-outline" style={{ color: t.text, borderColor: t.border }}>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <a
+                href="https://drive.google.com/file/d/12dfN641BTwjK-NtpoKIv2Jw-jwhKbQl4/view?usp=sharing"
+                className="btn-outline"
+                style={{ color: t.text, borderColor: t.border }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
                 Download CV
               </a>
             </div>
@@ -326,7 +370,6 @@ export default function Hero() {
               {[
                 { label: "GitHub", icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.75 5.48.75 11.76c0 4.96 3.22 9.17 7.7 10.65.56.1.76-.24.76-.54 0-.27-.01-1-.01-1.95-3.13.68-3.8-1.51-3.8-1.51-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 .17 1.55.93 1.55.93.99 1.7 2.6 1.21 3.24.93.1-.72.39-1.21.71-1.49-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.47.11-3.06 0 0 .95-.3 3.12 1.15a10.8 10.8 0 0 1 2.84-.38c.96 0 1.92.13 2.84.38 2.16-1.45 3.11-1.15 3.11-1.15.61 1.59.23 2.77.12 3.06.72.79 1.16 1.79 1.16 3.02 0 4.32-2.64 5.27-5.15 5.55.4.35.76 1.05.76 2.12 0 1.53-.01 2.77-.01 3.15 0 .3.2.65.77.54 4.48-1.48 7.69-5.69 7.69-10.65C23.25 5.48 18.27.5 12 .5z"/></svg> },
                 { label: "LinkedIn", icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 24h4V7h-4v17zM8.5 7v17h4v-9.3c0-2.3.8-3.9 2.9-3.9 2 0 2.1 1.8 2.1 4v9.2h4V13c0-5.6-3-8.2-7-8.2-3.2 0-4.6 1.8-5.1 3.1V7h-1z"/></svg> },
-                { label: "X", icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3.01a10.9 10.9 0 0 1-3.14.86A4.93 4.93 0 0 0 22.4.36a9.86 9.86 0 0 1-3.13 1.2 4.92 4.92 0 0 0-8.39 4.48A13.96 13.96 0 0 1 1.64.89 4.92 4.92 0 0 0 3.2 6.7a4.9 4.9 0 0 1-2.23-.62v.06a4.92 4.92 0 0 0 3.95 4.82 4.9 4.9 0 0 1-2.22.08 4.92 4.92 0 0 0 4.6 3.42A9.86 9.86 0 0 1 0 19.54a13.94 13.94 0 0 0 7.55 2.21c9.05 0 14-7.5 14-14v-.64A10.02 10.02 0 0 0 23 3.01z"/></svg> },
               ].map(({ label, icon }) => (
                 <a key={label} href="#" className="social-btn" aria-label={label} style={{ color: t.textMuted, borderColor: t.border }}>
                   {icon}
